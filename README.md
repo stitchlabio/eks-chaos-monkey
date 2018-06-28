@@ -8,6 +8,11 @@ Running kube monkey on AWS EKS.
   $ aws eks describe-cluster --name devel  --query cluster.endpoint
   $ aws eks describe-cluster --name devel  --query cluster.certificateAuthority.data
   ```
+  - deploy worker nodes
+  using Cloudformation(https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html)
+  ```
+  https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html
+  ```
   - configure aws-auth-cm file (update ARN which provided from Cloudformation)
   ```
   rolearn: <ARN of instance role (not instance profile)>
