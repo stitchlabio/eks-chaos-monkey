@@ -3,7 +3,16 @@ Running kube monkey on AWS EKS.
 
 ## Pre-requisition
 **1**. Setup EKS
-
+  - configure eks kubeconfig file
+  ```bash
+  $ aws eks describe-cluster --name devel  --query cluster.endpoint
+  $ aws eks describe-cluster --name devel  --query cluster.certificateAuthority.data
+  ```
+  - configure aws-auth-cm file (update ARN which provided from Cloudformation)
+  ```
+  rolearn: <ARN of instance role (not instance profile)>
+  ```
+  
 **2**. Deploy Guestbook container (refer to Jeff bar's blog https://aws.amazon.com/ko/blogs/aws/amazon-eks-now-generally-available/)
 
 ## Demo
