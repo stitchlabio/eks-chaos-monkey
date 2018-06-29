@@ -1,5 +1,6 @@
 # eks-kube-monkey
 Running kube monkey on AWS EKS.
+![kube monkey on AWS EKS](EKS-Kube-Monkey.png)
 
 ## Pre-requisition
 **1**. Setup EKS
